@@ -59,3 +59,48 @@ div {
       width: 450px;
     }
   }
+
+  /* Bonus */
+  #orange {
+    transition-property: transform;
+    transition-duration: 5s;
+
+    /* transition-timing-function: ease-in; */
+    /* OR */
+    transition-timing-function: cubic-bezier(1,-0.05, 1, 1);
+  }
+
+  #orange:hover {
+    transform: rotate(1080deg);
+  }
+
+  #purple {
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes circle {
+    100% {
+      border-radius: 85px;
+    }
+  }
+
+
+  #brown {
+    animation-name: flip;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes flip {
+    25% {
+      transform: translateX(200px);
+    }
+    50% {
+      transform: translateX(200px) translateY(-200px) rotateX(180deg);
+    }
+    75% {
+      transform: translateX(200px);
+    }
+  }
