@@ -30,3 +30,32 @@ div {
   }
   
   /* START BELOW THIS LINE */
+  #red {
+    transition-property: width;
+    transition-duration: 3s;
+  }
+
+  #red:hover {
+    width: 300px;
+  }
+
+  #green {
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-delay: 1s;
+  }
+
+  #green:hover {
+    transform: rotate(360deg);
+    background-color: yellow;
+  }
+
+  #blue {
+    animation-name: expand;
+    animation-duration: 8s;
+  }
+  @keyframes expand {
+    50% {
+      width: 450px;
+    }
+  }
